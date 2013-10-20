@@ -31,6 +31,13 @@ void setup(){
 void draw(){
   background(0);
 
+  for(int i=width;i>0;i-=1){
+   noStroke();
+   float  circle_stroke = map(i, 0, width, 0, 250);
+   fill(circle_stroke,100,100);
+   ellipse(width/2,height/2,i,i); 
+  }
+
   for(int i=0;i<360;i+=1){
     fill(255,255,255);
     stroke(255,255,255);
